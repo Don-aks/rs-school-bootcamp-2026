@@ -59,27 +59,37 @@ body {
 }
 
 .slider__radio {
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-
-  border-radius: 50%;
-  background-color: cornflowerblue;
+  display: inline-grid;
+  place-items: center;
+  padding: 0.3rem;
 
   cursor: pointer;
   appearance: none;
 
-  &:checked {
-    background-color: transparent;
+  &::before {
+    content: '';
+
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border-radius: 50%;
     border: 0.08rem solid cornflowerblue;
+    background-color: cornflowerblue;
+  }
+
+  &:checked::before {
+    background-color: transparent;
   }
 
   @media (any-hover: hover) {
     &:hover {
-      border-color: darkblue;
-      background-color: darkblue;
+      &::before {
+        border-color: darkblue;
+        background-color: darkblue;
+      }
 
-      &:checked {
+      &:checked::before {
         background-color: transparent;
       }
     }
