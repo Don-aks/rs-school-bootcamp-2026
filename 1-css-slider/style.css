@@ -55,6 +55,13 @@ body {
   min-height: 0;
 }
 
+.slider__caption-wrapper,
+.slider__navigation {
+  @media (max-width: 500px) {
+    grid-column: span 2;
+  }
+}
+
 @keyframes show {
   0% {
     display: block;
