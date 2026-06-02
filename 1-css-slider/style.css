@@ -125,6 +125,10 @@ body {
   border: 0.08rem solid cornflowerblue;
   background-color: cornflowerblue;
 
+  transition:
+    border-color 0.3s,
+    background-color 0.3s;
+
   &:checked {
     background-color: transparent;
   }
