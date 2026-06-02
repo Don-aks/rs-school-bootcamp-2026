@@ -4,4 +4,4 @@ This is the repository for the task solutions of the RS School JavaScript Bootca
 
 ## Solutions
 
-1. [Slider with CSS only.](https://youtu.be/dQw4w9WgXcQ)
+1. [Slider with CSS only.](https://don-aks.github.io/rs-school-js-bootcamp-2026/css-slider/)
