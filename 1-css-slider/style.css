@@ -6,6 +6,11 @@ body {
   font: 16px system-ui;
 }
 
+.slider {
+  display: grid;
+  row-gap: 0.7rem;
+}
+
 .slider__slider {
   width: 70dvw;
   height: 55dvh;
@@ -27,4 +32,38 @@ body {
   width: 100%;
   height: 100%;
   min-height: 0;
+}
+
+.slider__navigation {
+  display: flex;
+  gap: 0.04rem;
+  justify-content: center;
+}
+
+.slider__radio {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+
+  border-radius: 50%;
+  background-color: cornflowerblue;
+
+  cursor: pointer;
+  appearance: none;
+
+  &:checked {
+    background-color: transparent;
+    border: 0.08rem solid cornflowerblue;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: darkblue;
+      background-color: darkblue;
+
+      &:checked {
+        background-color: transparent;
+      }
+    }
+  }
 }
