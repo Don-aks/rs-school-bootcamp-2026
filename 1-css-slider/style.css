@@ -27,19 +27,19 @@ body {
 
   transition: translate 0.5s;
 
-  .slider:has(.slider__radio:nth-child(1):checked) & {
+  .slider:has(.slider__radio-label:nth-child(1) input:checked) & {
     translate: 0 0;
   }
 
-  .slider:has(.slider__radio:nth-child(2):checked) & {
+  .slider:has(.slider__radio-label:nth-child(2) input:checked) & {
     translate: -72dvw 0;
   }
 
-  .slider:has(.slider__radio:nth-child(3):checked) & {
+  .slider:has(.slider__radio-label:nth-child(3) input:checked) & {
     translate: -144dvw 0;
   }
 
-  .slider:has(.slider__radio:nth-child(4):checked) & {
+  .slider:has(.slider__radio-label:nth-child(4) input:checked) & {
     translate: -216dvw 0;
   }
 }
@@ -89,10 +89,10 @@ body {
 .slider__caption {
   animation: hide forwards 0s;
 
-  .slider:has(.slider__radio:nth-child(1):checked) &:nth-child(1),
-  .slider:has(.slider__radio:nth-child(2):checked) &:nth-child(2),
-  .slider:has(.slider__radio:nth-child(3):checked) &:nth-child(3),
-  .slider:has(.slider__radio:nth-child(4):checked) &:nth-child(4) {
+  .slider:has(.slider__radio-label:nth-child(1) input:checked) &:nth-child(1),
+  .slider:has(.slider__radio-label:nth-child(2) input:checked) &:nth-child(2),
+  .slider:has(.slider__radio-label:nth-child(3) input:checked) &:nth-child(3),
+  .slider:has(.slider__radio-label:nth-child(4) input:checked) &:nth-child(4) {
     animation: show forwards 0.5s;
   }
 }
@@ -103,38 +103,38 @@ body {
   justify-content: center;
 }
 
+.slider__radio-label,
 .slider__radio {
+  cursor: pointer;
+}
+
+.slider__radio-label {
   display: inline-grid;
   place-items: center;
   padding: 0.3rem;
+}
 
-  cursor: pointer;
+.slider__radio {
   appearance: none;
 
-  &::before {
-    content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
 
-    display: block;
-    width: 0.5rem;
-    height: 0.5rem;
+  border-radius: 50%;
+  border: 0.08rem solid cornflowerblue;
+  background-color: cornflowerblue;
 
-    border-radius: 50%;
-    border: 0.08rem solid cornflowerblue;
-    background-color: cornflowerblue;
-  }
-
-  &:checked::before {
+  &:checked {
     background-color: transparent;
   }
 
   @media (any-hover: hover) {
     &:hover {
-      &::before {
-        border-color: darkblue;
-        background-color: darkblue;
-      }
+      border-color: darkblue;
+      background-color: darkblue;
 
-      &:checked::before {
+      &:checked {
         background-color: transparent;
       }
     }
