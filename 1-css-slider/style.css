@@ -21,6 +21,24 @@ body {
 .slider__track {
   display: flex;
   gap: 2dvw;
+
+  transition: translate 0.5s;
+
+  .slider:has(.slider__radio:nth-child(1):checked) & {
+    translate: 0 0;
+  }
+
+  .slider:has(.slider__radio:nth-child(2):checked) & {
+    translate: -72dvw 0;
+  }
+
+  .slider:has(.slider__radio:nth-child(3):checked) & {
+    translate: -144dvw 0;
+  }
+
+  .slider:has(.slider__radio:nth-child(4):checked) & {
+    translate: -216dvw 0;
+  }
 }
 
 .slide {
