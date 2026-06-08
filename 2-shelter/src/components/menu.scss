@@ -1,0 +1,39 @@
+.menu {
+  &__btn {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 35px;
+
+    font-family: var(--font-secondary);
+    font-size: 15px;
+
+    color: var(--text-on-dark);
+  }
+
+  &__link {
+    color: var(--text-on-dark-muted);
+
+    &--current {
+      position: relative;
+      display: inline-block;
+
+      color: inherit;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        height: 3px;
+        background-color: var(--primary);
+      }
+    }
+  }
+}
