@@ -34,7 +34,10 @@ export default {
       injectSvgOnDev: true,
     }),
 
-    viteImageToAVIFPlugin({ sourcePaths: ['src/assets/images'] }),
+    viteImageToAVIFPlugin({
+      sourcePaths: ['src/assets/images'],
+      outputDir: 'src/assets/images',
+    }),
     optimizeSvgSources(),
   ],
 };
