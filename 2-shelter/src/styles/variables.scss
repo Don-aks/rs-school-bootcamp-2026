@@ -1,0 +1,36 @@
+@use 'sass:color';
+
+:root {
+  // Fonts
+  --font-family-base: ;
+  --font-family-accent: ;
+
+  // Colors
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-black-secondary: ;
+  --color-white-secondary: ;
+
+  // Base colors
+  --color-base: var(--color-black);
+  --color-base-secondary: var(--color-black-secondary);
+  --color-background: var(--color-white);
+
+  // Accent colors
+  --color-primary: ;
+  --color-primary-dark: ;
+  --color-accent: ;
+
+  // Layout
+  --container-width: 1280px;
+  --container-padding-x: 15px;
+  --header-height: 77px;
+
+  // Focus outline
+  --outline-size: 2px;
+  --outline-offset: 2px;
+
+  // Misc
+  --transition-duration: 0.3s;
+  --header-z-index: 10;
+}

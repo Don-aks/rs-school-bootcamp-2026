@@ -1,0 +1,63 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+
+  &:has(dialog[open]) {
+    overflow: clip;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: 0.01s !important;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-block-size: 100dvh;
+  min-inline-size: $min-viewport-width;
+
+  font: 16px/1.5 var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-base);
+
+  overflow-x: clip;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  @include hover {
+  }
+
+  &:active {
+    color: var(--color-accent);
+  }
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+}
+
+.text > p:not(:last-child) {
+}
+
+:focus {
+  -webkit-focus-ring-color: transparent;
+}
+
+:focus-visible {
+  outline: var(--outline-size) solid var(--color-primary);
+  outline-offset: var(--outline-offset);
+  border-radius: 4px;
+}
