@@ -1,4 +1,5 @@
 import { fileURLToPath } from 'node:url';
+
 import { viteImageToAVIFPlugin } from 'vite-image-to-avif-plugin';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 
