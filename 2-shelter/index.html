@@ -11,6 +11,326 @@
     <title>Cozy House — Shelter for pets in Boston</title>
   </head>
   <body>
+    <header class="header">
+      <nav class="header__inner container">
+        <a class="logo header__logo" href="index.html">
+          <span class="logo__text">Cozy House</span>
+          <p class="logo__caption">Shelter for pets in Boston</p>
+        </a>
+
+        <div class="menu header__menu">
+          <button
+            class="menu__btn"
+            type="button"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span class="menu__btn-line"></span>
+          </button>
+
+          <ul class="menu__list" id="menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link--current" href="index.html">
+                About the shelter
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="pets.html">Our pets</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#help">Help the shelter</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#footer">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__offer">
+            <h1 class="title hero__title">Not only people need a house</h1>
+            <div class="text hero__text">
+              <p>
+                We offer to give a chance to a little and nice puppy with an
+                extremely wide and open heart. He or she will love you more than
+                anybody else in the world, you will see!
+              </p>
+            </div>
+            <a class="btn btn--primary hero__offer-btn" href="#pets">
+              Make a friend
+            </a>
+          </div>
+
+          <div class="hero__image">
+            <img
+              class="hero__image-img"
+              src="src/assets/images/hero-puppy.avif"
+              alt="A close-up profile view of a Beagle puppy looking up, featuring its long floppy brown ear and white and tan patches against a white background"
+              width="698"
+              height="728"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="about section">
+        <div class="container about__inner">
+          <div class="about__image">
+            <img
+              class="about__image-img"
+              src="src/assets/images/about-pets.avif"
+              alt="A close-up profile view of a Beagle puppy looking up, featuring its long floppy brown ear and white and tan patches against a white background"
+              width="300"
+              height="408"
+            />
+          </div>
+
+          <div class="about__content">
+            <h1 class="title about__title section__title">About the shelter</h1>
+            <div class="text about__text">
+              <p>
+                Currently we have 121 dogs and 342 cats on our hands and
+                statistics show that only 20% of them will find a family. The
+                others will continue to live with us and will be waiting for a
+                lucky chance to become dearly loved.
+              </p>
+              <p>
+                We feed our wards with the best food and make sure that they do
+                not get sick, feel comfortable (including psychologically) and
+                well. We are supported by 87 volunteers and 28 employees of
+                various skill levels. About 12% of the animals are taken by the
+                shelter staff. Taking care of the animals, they become attached
+                to the pets and would hardly ever leave them alone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pets section">
+        <div class="pets__inner container">
+          <h2 class="title section__title pets__title">
+            Our friends who are looking for a house
+          </h2>
+          <div class="pets__slider slider js-slider">
+            <ul class="pets__slider-inner slider__inner js-slider-inner">
+              <li class="pets__slider-item slider__slide js-slider-slide">
+                <article class="pet pets__pet">
+                  <figure class="pet__figure">
+                    <img
+                      class="pet__image"
+                      src="/images/pets/katrine.avif"
+                      alt="A grey British Shorthair cat standing and looking directly forward, isolated on a solid white background"
+                      width="270"
+                      height="270"
+                    />
+                    <figcaption class="pet__name">Katrine</figcaption>
+                  </figure>
+                </article>
+              </li>
+
+              <li class="pets__slider-item slider__slide js-slider-slide">
+                <article class="pet pets__pet">
+                  <figure class="pet__figure">
+                    <img
+                      class="pet__image"
+                      src="/images/pets/jennifer.avif"
+                      alt="A small, fluffy light cream-colored puppy sitting and looking slightly to the side, isolated on a solid white background"
+                      width="270"
+                      height="270"
+                    />
+                    <figcaption class="pet__name">Jennifer</figcaption>
+                  </figure>
+                </article>
+              </li>
+
+              <li class="pets__slider-item slider__slide js-slider-slide">
+                <article class="pet pets__pet">
+                  <figure class="pet__figure">
+                    <img
+                      class="pet__image"
+                      src="/images/pets/woody.avif"
+                      alt="A happy golden retriever lying down on a solid white background, looking directly forward with an open mouth and panting expression"
+                      width="270"
+                      height="270"
+                    />
+                    <figcaption class="pet__name">Woody</figcaption>
+                  </figure>
+                </article>
+              </li>
+            </ul>
+
+            <button
+              class="slider__nav-btn slider__nav-btn--prev js-slider-prev-btn"
+              type="button"
+            >
+              <span class="visually-hidden">Previous slide</span>
+              <svg class="slider__arrow-icon">
+                <use href="/__spritemap#arrow-right"></use>
+              </svg>
+            </button>
+
+            <button
+              class="slider__nav-btn slider__nav-btn--next js-slider-next-btn"
+              type="button"
+            >
+              <span class="visually-hidden">Next slide</span>
+              <svg class="slider__arrow-icon">
+                <use href="/__spritemap#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+
+          <a class="btn btn--primary" href="pets.html">Get to know the rest</a>
+        </div>
+      </section>
+
+      <section class="cta section">
+        <div class="cta__inner container">
+          <h2 class="title section__title cta__title">
+            How you can help our shelter
+          </h2>
+
+          <ul class="cta__list">
+            <li class="cta__item" style="--icon: '/__spritemap#pet-food'">
+              Pet food
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#pet-car'">
+              Transportation
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#baseball-ball'">
+              Toys
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#bowl'">
+              Bowls and cups
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#shampoo'">
+              Shampoos
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#pills'">
+              Vitamins
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#injector'">
+              Medicines
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#collar'">
+              Collars / leashes
+            </li>
+            <li class="cta__item" style="--icon: '/__spritemap#pet-house'">
+              Sleeping areas
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section donation">
+        <div class="donation__inner container">
+          <div class="donation__image">
+            <img
+              class="donation__image-img"
+              src="src/assets/images/donation-dog.avif"
+              alt="A golden-brown English Cocker Spaniel puppy lying down and tilting its head, isolated on a solid white background"
+              width="505"
+              height="261"
+            />
+          </div>
+          <div class="donation__content">
+            <h2 class="title section__title donation__title">
+              You can also make a donation
+            </h2>
+            <h3 class="donation__subtitle">
+              Name of the bank / Type of bank account
+            </h3>
+            <button class="donation__card-badge js-copy-to-clipboard">
+              8380 2880 8028 8791 7435
+            </button>
+            <div class="text donation__legal-text">
+              <p>
+                Legal information and lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Maecenas a ipsum at libero sagittis dignissim
+                sed ac diam. Praesent ultrices maximus tortor et vulputate.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer__inner container">
+        <div class="footer__contacts">
+          <h2 class="title footer__contacts-title">
+            For questions and suggestions
+          </h2>
+          <ul class="footer__contacts-list">
+            <li class="footer__contacts-item">
+              <a class="footer__contacts-link" href="mailto:email@shelter.com">
+                <svg class="footer__contacts-icon">
+                  <use href="/__spritemap#letter"></use>
+                </svg>
+                email@shelter.com
+              </a>
+            </li>
+            <li class="footer__contacts-item">
+              <a class="footer__contacts-link" href="tel:+136745677554">
+                <svg class="footer__contacts-icon">
+                  <use href="/__spritemap#telephone"></use>
+                </svg>
+                +13 674 567 75 54
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <address class="footer__locations">
+          <h2 class="tite footer__title">We are waiting for your visit</h2>
+          <ul class="footer__locations-list">
+            <li class="footer__locations-item">
+              <a
+                class="footer__locations-link"
+                href="https://maps.app.goo.gl/cu7c8eDXejWiUg5W7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer__locations-icon">
+                  <use href="/__spritemap#location-pin"></use>
+                </svg>
+                1 Central Street, Boston (entrance from the store)
+              </a>
+            </li>
+            <li class="footer__locations-item">
+              <a
+                class="footer__locations-link"
+                href="https://maps.app.goo.gl/qJpAaM2boF5o5CDa7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer__locations-icon">
+                  <use href="__spritemap#location-pin"></use>
+                </svg>
+                18 South Park, London
+              </a>
+            </li>
+          </ul>
+        </address>
+
+        <div class="footer__image">
+          <img
+            class="footer__image-img"
+            src="src/assets/images/footer-puppy.avif"
+            alt="A funny Golden Retriever puppy licking the screen with its tongue out and holding up its paw, isolated on a solid white background"
+            width="300"
+            height="310"
+          />
+        </div>
+      </div>
+    </footer>
+
     <script src="src/main.js" type="module"></script>
     <script src="src/pages/index.js" type="module"></script>
   </body>
