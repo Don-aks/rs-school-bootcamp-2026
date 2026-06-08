@@ -2,35 +2,72 @@
 
 :root {
   // Fonts
-  --font-family-base: ;
-  --font-family-accent: ;
+  --font-primary: Georgia, serif;
+  --font-secondary: Arial, system-ui;
 
-  // Colors
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-black-secondary: ;
-  --color-white-secondary: ;
+  // === Pallete === //
+  --white: #ffffff;
+  --black: #292929;
+  --brown: #211f20;
 
-  // Base colors
-  --color-base: var(--color-black);
-  --color-base-secondary: var(--color-black-secondary);
-  --color-background: var(--color-white);
+  --gray-100: #fafafa;
+  --gray-200: #f6f6f6;
+  --gray-300: #cdcdcd;
+  --gray-600: #b2b2b2;
+  --gray-800: #545454;
+  --gray-850: #4c4c4c;
 
-  // Accent colors
-  --color-primary: ;
-  --color-primary-dark: ;
-  --color-accent: ;
+  --primary: #f1cdb3;
+  --primary-hover: #fddcc4;
+
+  // === Text === //
+  --text-primary: var(--gray-850);
+  --text-secondary: var(--gray-800);
+  --text-tertiary: var(--black);
+  --text-muted: var(--gray-600);
+
+  --text-on-dark: var(--gray-100);
+  --text-on-dark-muted: var(--gray-300);
+
+  // === Background === //
+  --bg: var(--white);
+  --bg-soft: var(--gray-100);
+  --bg-muted: var(--gray-200);
+
+  --bg-dark: var(--black);
+  --bg-dark-alt: var(--brown);
+
+  // === UI elements === //
+  --icon: var(--black);
+  --icon-accent: var(--primary);
+
+  --text-btn: var(--black);
 
   // Layout
   --container-width: 1280px;
   --container-padding-x: 15px;
-  --header-height: 77px;
+  --header-height: #{60px + 30px * 2};
 
   // Focus outline
   --outline-size: 2px;
   --outline-offset: 2px;
 
   // Misc
-  --transition-duration: 0.3s;
-  --header-z-index: 10;
+  --transition: 0.3s;
+  --header-z: 10;
+
+  // Images
+  --noise-url: url('src/assets/images/noise-pattern.png');
+
+  // Gradients
+  --gradient-footer: radial-gradient(
+    549.89% 73.65% at 5.73% 50%,
+    #513d2f 0%,
+    #1a1a1c 100%
+  );
+  --gradient-hero: radial-gradient(
+    237.5% 111.8% at 0% 0%,
+    #5b483a 0%,
+    #262425 100%
+  );
 }
