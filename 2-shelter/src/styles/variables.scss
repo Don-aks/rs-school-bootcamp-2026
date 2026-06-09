@@ -27,8 +27,9 @@
   --text-tertiary: var(--black);
   --text-muted: var(--gray-600);
 
-  --text-on-dark: var(--gray-100);
-  --text-on-dark-muted: var(--gray-300);
+  --text-on-dark-primary: var(--gray-100);
+  --text-on-dark-secondary: var(--gray-300);
+  --text-on-dark-tertiary: var(--white);
 
   // === Background === //
   --bg: var(--white);

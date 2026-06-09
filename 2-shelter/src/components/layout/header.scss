@@ -1,8 +1,8 @@
 .header {
   // TODO: change to fixed on stage 3
-  --links-color: var(--text-on-dark-muted);
-  --current-link-color: var(--text-on-dark);
-  --link-hover-color: var(--text-on-dark);
+  --links-color: var(--text-on-dark-secondary);
+  --current-link-color: var(--text-on-dark-primary);
+  --link-hover-color: var(--text-on-dark-primary);
 
   position: absolute;
   top: 0;
