@@ -22,7 +22,7 @@ html {
 
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   min-block-size: 100dvh;
   min-inline-size: $min-viewport-width;
 
