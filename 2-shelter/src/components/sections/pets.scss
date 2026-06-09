@@ -1,0 +1,20 @@
+.pets {
+  padding-top: 84px;
+  background-color: var(--bg-muted);
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__slider {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    .slider__inner {
+      width: min(990px, 100%);
+    }
+  }
+}

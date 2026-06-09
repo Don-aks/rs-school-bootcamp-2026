@@ -1,0 +1,35 @@
+.pet-card {
+  position: relative;
+
+  @extend %flex-column;
+  align-items: center;
+  width: min(270px, 100%);
+  gap: 30px;
+  padding-bottom: 30px;
+
+  background-color: var(--bg-soft);
+  transition: background-color var(--transition);
+
+  @include hover {
+    background-color: var(--bg);
+  }
+
+  &__figure {
+    @extend %flex-column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__name {
+    font-size: 20px;
+    letter-spacing: var(--spacing-wide);
+  }
+
+  &__btn {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
+}

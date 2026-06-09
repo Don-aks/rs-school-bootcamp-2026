@@ -3,7 +3,7 @@
 
   &__text {
     font: 32px/1.1 var(--font-primary);
-    letter-spacing: 0.06em;
+    letter-spacing: var(--spacing-wide);
 
     color: var(--primary);
   }

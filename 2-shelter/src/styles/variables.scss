@@ -4,6 +4,7 @@
   // Fonts
   --font-primary: Georgia, serif;
   --font-secondary: Arial, system-ui;
+  --spacing-wide: 0.06em;
 
   // === Pallete === //
   --white: #ffffff;
@@ -40,6 +41,7 @@
   // === UI elements === //
   --icon: var(--black);
   --icon-accent: var(--primary);
+  --icon-disabled: var(--gray-300);
 
   --text-btn: var(--black);
 

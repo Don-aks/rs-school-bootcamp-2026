@@ -1,0 +1,30 @@
+.cta {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: min(1029px, 100%);
+    gap: 50px 120px;
+  }
+
+  &__item {
+    @extend %flex-column;
+    align-items: center;
+    gap: 30px;
+
+    &::before {
+      content: '';
+      display: block;
+      @include square(60px);
+      background: var(--icon) center/contain no-repeat;
+    }
+  }
+
+  &__item-title {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: var(--spacing-wide);
+
+    color: var(--text-secondary);
+  }
+}

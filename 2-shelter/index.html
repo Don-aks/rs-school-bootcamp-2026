@@ -30,7 +30,12 @@
 
           <ul class="menu__list" id="menu">
             <li class="menu__item">
-              <a class="menu__link menu__link--current" href="index.html">
+              <a
+                class="menu__link menu__link--current"
+                href="index.html"
+                tabindex="-1"
+                aria-current="page"
+              >
                 About the shelter
               </a>
             </li>
@@ -52,7 +57,11 @@
       <section class="hero">
         <div class="container hero__inner">
           <div class="hero__offer">
-            <h1 class="title hero__title">Not only people need a house</h1>
+            <h1 class="title hero__title">
+              Not only people
+              <br />
+              need a house
+            </h1>
             <div class="text hero__text">
               <p>
                 We offer to give a chance to a little and nice puppy with an
@@ -90,7 +99,11 @@
           </div>
 
           <div class="about__content">
-            <h1 class="title about__title section__title">About the shelter</h1>
+            <h1 class="title about__title section__title">
+              About the shelter
+              <br />
+              “Cozy House”
+            </h1>
             <div class="text about__text">
               <p>
                 Currently we have 121 dogs and 342 cats on our hands and
@@ -111,59 +124,14 @@
         </div>
       </section>
 
-      <section class="pets section">
-        <div class="pets__inner container">
+      <section class="pets section" id="pets">
+        <div class="pets__inner section__inner container">
           <h2 class="title section__title pets__title">
-            Our friends who are looking for a house
+            Our friends who
+            <br />
+            are looking for a house
           </h2>
           <div class="pets__slider slider js-slider">
-            <ul class="pets__slider-inner slider__inner js-slider-inner">
-              <li class="pets__slider-item slider__slide js-slider-slide">
-                <article class="pet pets__pet">
-                  <figure class="pet__figure">
-                    <img
-                      class="pet__image"
-                      src="/images/pets/katrine.avif"
-                      alt="A grey British Shorthair cat standing and looking directly forward, isolated on a solid white background"
-                      width="270"
-                      height="270"
-                    />
-                    <figcaption class="pet__name">Katrine</figcaption>
-                  </figure>
-                </article>
-              </li>
-
-              <li class="pets__slider-item slider__slide js-slider-slide">
-                <article class="pet pets__pet">
-                  <figure class="pet__figure">
-                    <img
-                      class="pet__image"
-                      src="/images/pets/jennifer.avif"
-                      alt="A small, fluffy light cream-colored puppy sitting and looking slightly to the side, isolated on a solid white background"
-                      width="270"
-                      height="270"
-                    />
-                    <figcaption class="pet__name">Jennifer</figcaption>
-                  </figure>
-                </article>
-              </li>
-
-              <li class="pets__slider-item slider__slide js-slider-slide">
-                <article class="pet pets__pet">
-                  <figure class="pet__figure">
-                    <img
-                      class="pet__image"
-                      src="/images/pets/woody.avif"
-                      alt="A happy golden retriever lying down on a solid white background, looking directly forward with an open mouth and panting expression"
-                      width="270"
-                      height="270"
-                    />
-                    <figcaption class="pet__name">Woody</figcaption>
-                  </figure>
-                </article>
-              </li>
-            </ul>
-
             <button
               class="slider__nav-btn slider__nav-btn--prev js-slider-prev-btn"
               type="button"
@@ -173,6 +141,71 @@
                 <use href="/__spritemap#arrow-right"></use>
               </svg>
             </button>
+
+            <ul class="pets__slider-inner slider__inner js-slider-inner">
+              <li class="pets__slider-item slider__slide js-slider-slide">
+                <article class="pet-card pets__pet-card">
+                  <figure class="pet-card__figure">
+                    <img
+                      class="pet-card__image"
+                      src="/images/pets/katrine.avif"
+                      alt="A grey British Shorthair cat standing and looking directly forward, isolated on a solid white background"
+                      width="270"
+                      height="270"
+                    />
+                    <figcaption class="pet-card__name">Katrine</figcaption>
+                  </figure>
+                  <button
+                    class="btn btn--secondary pet-card__btn js-pet-card-btn"
+                    type="button"
+                  >
+                    Learn more
+                  </button>
+                </article>
+              </li>
+
+              <li class="pets__slider-item slider__slide js-slider-slide">
+                <article class="pet-card pets__pet-card">
+                  <figure class="pet-card__figure">
+                    <img
+                      class="pet-card__image"
+                      src="/images/pets/jennifer.avif"
+                      alt="A small, fluffy light cream-colored puppy sitting and looking slightly to the side, isolated on a solid white background"
+                      width="270"
+                      height="270"
+                    />
+                    <figcaption class="pet-card__name">Jennifer</figcaption>
+                  </figure>
+                  <button
+                    class="btn btn--secondary pet-card__btn js-pet-card-btn"
+                    type="button"
+                  >
+                    Learn more
+                  </button>
+                </article>
+              </li>
+
+              <li class="pets__slider-item slider__slide js-slider-slide">
+                <article class="pet-card pets__pet-card">
+                  <figure class="pet-card__figure">
+                    <img
+                      class="pet-card__image"
+                      src="/images/pets/woody.avif"
+                      alt="A happy golden retriever lying down on a solid white background, looking directly forward with an open mouth and panting expression"
+                      width="270"
+                      height="270"
+                    />
+                    <figcaption class="pet-card__name">Woody</figcaption>
+                  </figure>
+                  <button
+                    class="btn btn--secondary pet-card__btn js-pet-card-btn"
+                    type="button"
+                  >
+                    Learn more
+                  </button>
+                </article>
+              </li>
+            </ul>
 
             <button
               class="slider__nav-btn slider__nav-btn--next js-slider-next-btn"
@@ -190,38 +223,62 @@
       </section>
 
       <section class="cta section">
-        <div class="cta__inner container">
+        <div class="cta__inner section__inner container">
           <h2 class="title section__title cta__title">
             How you can help our shelter
           </h2>
 
           <ul class="cta__list">
-            <li class="cta__item" style="--icon: '/__spritemap#pet-food'">
-              Pet food
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#pet-food-view')"
+            >
+              <h3 class="cta__item-title">Pet food</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#pet-car'">
-              Transportation
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#pet-car-view')"
+            >
+              <h3 class="cta__item-title">Transportation</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#baseball-ball'">
-              Toys
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#baseball-ball-view')"
+            >
+              <h3 class="cta__item-title">Toys</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#bowl'">
-              Bowls and cups
+            <li class="cta__item" style="--icon: url('/__spritemap#bowl-view')">
+              <h3 class="cta__item-title">Bowls and cups</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#shampoo'">
-              Shampoos
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#shampoo-view')"
+            >
+              <h3 class="cta__item-title">Shampoos</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#pills'">
-              Vitamins
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#pills-view')"
+            >
+              <h3 class="cta__item-title">Vitamins</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#injector'">
-              Medicines
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#injector-view')"
+            >
+              <h3 class="cta__item-title">Medicines</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#collar'">
-              Collars / leashes
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#collar-view')"
+            >
+              <h3 class="cta__item-title">Collars / leashes</h3>
             </li>
-            <li class="cta__item" style="--icon: '/__spritemap#pet-house'">
-              Sleeping areas
+            <li
+              class="cta__item"
+              style="--icon: url('/__spritemap#pet-house-view')"
+            >
+              <h3 class="cta__item-title">Sleeping areas</h3>
             </li>
           </ul>
         </div>
@@ -240,7 +297,9 @@
           </div>
           <div class="donation__content">
             <h2 class="title section__title donation__title">
-              You can also make a donation
+              You can also
+              <br />
+              make a donation
             </h2>
             <h3 class="donation__subtitle">
               Name of the bank / Type of bank account
@@ -264,7 +323,7 @@
     <footer class="footer" id="footer">
       <div class="footer__inner container">
         <div class="footer__contacts">
-          <h2 class="title footer__contacts-title">
+          <h2 class="title footer__title footer__contacts-title">
             For questions and suggestions
           </h2>
           <ul class="footer__contacts-list">
