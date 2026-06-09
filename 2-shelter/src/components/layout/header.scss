@@ -1,5 +1,9 @@
 .header {
   // TODO: change to fixed on stage 3
+  --links-color: var(--text-on-dark-muted);
+  --current-link-color: var(--text-on-dark);
+  --link-hover-color: var(--text-on-dark);
+
   position: absolute;
   top: 0;
   left: 0;
@@ -12,10 +16,24 @@
   background-color: transparent;
   color: var(--white);
 
+  &--fixed,
+  &--on-light {
+    --links-color: var(--text-secondary);
+    --current-link-color: var(--text-secondary);
+    --link-hover-color: var(--text-tertiary);
+
+    .logo__text {
+      color: var(--text-secondary);
+    }
+
+    .logo__caption {
+      color: var(--text-tertiary);
+    }
+  }
+
   &--fixed {
     position: fixed;
 
-    color: var(--text-main);
     background-color: var(--white);
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
   }

@@ -12,17 +12,21 @@
     font-family: var(--font-secondary);
     font-size: 15px;
 
-    color: var(--text-on-dark);
+    color: var(--links-color);
   }
 
   &__link {
-    color: var(--text-on-dark-muted);
+    transition: color var(--transition);
+
+    @include hover {
+      color: var(--link-hover-color);
+    }
 
     &--current {
       position: relative;
       display: inline-block;
 
-      color: inherit;
+      color: var(--current-link-color);
 
       &::after {
         content: '';
