@@ -33,6 +33,10 @@ body {
   overflow-x: clip;
 }
 
+.main:not(:has(.hero)) {
+  padding-top: var(--header-height);
+}
+
 .section {
   padding-block: 80px 100px;
 
