@@ -82,6 +82,13 @@ body {
 
   @extend %no-highlight;
 
+  &:disabled {
+    color: var(--icon-disabled);
+    border-color: var(--icon-disabled);
+
+    cursor: default;
+  }
+
   &:focus-visible {
     border-radius: 100px;
   }
@@ -91,7 +98,9 @@ body {
     transition: background-color var(--transition);
 
     @include hover {
-      background-color: var(--primary-hover);
+      &:not(:disabled) {
+        background-color: var(--primary-hover);
+      }
     }
   }
 
@@ -102,8 +111,10 @@ body {
       border-color var(--transition);
 
     @include hover {
-      background-color: var(--primary-hover);
-      border-color: var(--primary-hover);
+      &:not(:disabled) {
+        background-color: var(--primary-hover);
+        border-color: var(--primary-hover);
+      }
     }
   }
 }
