@@ -16,7 +16,9 @@
   }
 
   &__subtitle {
+    font-size: 15px;
     font-weight: 400;
+    letter-spacing: var(--spacing-wide);
   }
 
   &__card-badge {
