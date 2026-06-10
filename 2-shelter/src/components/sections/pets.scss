@@ -5,10 +5,6 @@
   .page-pets & {
     padding-top: 80px;
 
-    .pets__inner {
-      gap: 45px;
-    }
-
     .pets__title {
       &:not(:last-child) {
         margin-bottom: 0;

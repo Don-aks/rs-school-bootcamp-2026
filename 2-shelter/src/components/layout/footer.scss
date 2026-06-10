@@ -59,6 +59,10 @@
   &__locations-title {
     &:not(:last-child) {
       margin-bottom: 34px;
+
+      .page-pets & {
+        margin-bottom: 26px;
+      }
     }
   }
 
