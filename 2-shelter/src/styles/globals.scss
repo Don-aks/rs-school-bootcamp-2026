@@ -23,6 +23,7 @@ html {
 body {
   display: grid;
   grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
   min-block-size: 100dvh;
   min-inline-size: $min-viewport-width;
 
