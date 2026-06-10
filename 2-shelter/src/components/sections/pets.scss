@@ -2,6 +2,13 @@
   padding-top: 84px;
   background-color: var(--bg-muted);
 
+  &__inner {
+    @extend %flex-column;
+    align-items: center;
+
+    text-align: center;
+  }
+
   &__title {
     &:not(:last-child) {
       margin-bottom: 56px;
