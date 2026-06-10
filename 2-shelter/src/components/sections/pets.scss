@@ -9,12 +9,19 @@
   }
 
   &__slider {
+    justify-content: start;
+    gap: 49px;
+
     &:not(:last-child) {
       margin-bottom: 60px;
     }
 
-    .slider__inner {
+    .slider__track {
       width: min(990px, 100%);
+    }
+
+    .slider__inner {
+      gap: 90px;
     }
   }
 }

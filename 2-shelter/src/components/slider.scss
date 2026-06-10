@@ -1,11 +1,14 @@
 .slider {
   width: 100%;
-  overflow: hidden;
 
   &:has(.slider__nav-btn) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__track {
+    overflow: hidden;
   }
 
   &__inner {
@@ -14,6 +17,7 @@
   }
 
   &__slide {
+    flex: 1 0 auto;
   }
 
   &__nav-btn {
