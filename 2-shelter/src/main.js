@@ -7,9 +7,11 @@ import '@/styles/variables.scss';
 import '@/styles/utilities.scss';
 import '@/styles/globals.scss';
 
-import '@/components/layout/header.scss';
+import '@/components/preloader.scss';
 import '@/components/logo.scss';
 import '@/components/menu.scss';
+
+import '@/components/layout/header.scss';
 import '@/components/layout/footer.scss';
 
 const preloader = new Preloader();
