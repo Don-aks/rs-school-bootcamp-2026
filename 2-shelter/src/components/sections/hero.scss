@@ -1,7 +1,7 @@
 .hero {
-  height: 100dvh;
+  // height: 100dvh;
   min-height: 560px;
-  max-height: 908px;
+  // max-height: 908px;
   padding-top: calc(var(--header-height) + 60px);
 
   color: var(--white);
@@ -20,7 +20,7 @@
     align-items: start;
     flex-basis: 460px;
     gap: 42px;
-    padding-top: min(15dvh, 163px);
+    padding-top: /*min(15dvh,*/ 163px /*)*/;
 
     @media (max-height: 725px) {
       justify-content: center;

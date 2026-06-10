@@ -32,7 +32,7 @@
 
   &__contacts-list {
     @extend %flex-column;
-    gap: 40px;
+    gap: 29px;
   }
 
   &__link {
@@ -66,5 +66,9 @@
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+  }
+
+  &__image {
+    margin-top: -16px;
   }
 }

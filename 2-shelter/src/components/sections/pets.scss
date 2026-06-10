@@ -44,6 +44,12 @@
     .slider__inner {
       gap: 90px;
     }
+
+    .slider__nav-btn {
+      &--prev {
+        translate: -7px 0;
+      }
+    }
   }
 
   &__grid {

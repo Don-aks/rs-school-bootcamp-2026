@@ -4,13 +4,13 @@
     flex-wrap: wrap;
     justify-content: center;
     width: min(1029px, 100%);
-    gap: 50px 120px;
+    gap: 42px 120px;
   }
 
   &__item {
     @extend %flex-column;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 
     &::before {
       content: '';
