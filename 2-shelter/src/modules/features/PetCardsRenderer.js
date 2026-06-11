@@ -48,7 +48,10 @@ class PetCardsRenderer {
 
     cardElement.dataset.index = index;
     cardElement.innerHTML = `
-      <article class="pet-card pets__pet-card">
+      <article
+        class="pet-card pets__pet-card"
+        title="View more about ${card.name}"
+      >
         <figure class="pet-card__figure">
           <img
             class="pet-card__image"
