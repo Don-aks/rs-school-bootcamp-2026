@@ -21,6 +21,8 @@ html {
 }
 
 body {
+  position: relative;
+
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
