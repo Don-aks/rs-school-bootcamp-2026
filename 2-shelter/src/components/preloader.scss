@@ -44,7 +44,7 @@
   }
 
   &--error {
-    .car {
+    .preloader__car {
       translate: 0 -50px;
       animation: none;
 
@@ -62,13 +62,22 @@
   @include square(170px);
   overflow: visible;
 
-  transition: transform 0.5s;
-  animation: vintageCarBounce 2s infinite;
+  transition:
+    translate 0.5s,
+    transform var(--transition);
   will-change: transform;
 
   &--hidden {
-    animation: none;
-    transform: skewX(-18deg) translateX(calc(-50vw - 50% - 18px));
+    .car__inner {
+      animation: none;
+    }
+
+    transform: skewX(-18deg);
+    translate: calc(-50vw - 50% - 18px) 0;
+  }
+
+  &__inner {
+    animation: vintageCarBounce 2s infinite;
   }
 
   &__lights {
