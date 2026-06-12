@@ -1,0 +1,10 @@
+{
+  "name": "rs-school-bootcamp-2026",
+  "private": true,
+  "workspaces": [
+    "2-shelter"
+  ],
+  "scripts": {
+    "build:all": "npm -ws run build"
+  }
+}

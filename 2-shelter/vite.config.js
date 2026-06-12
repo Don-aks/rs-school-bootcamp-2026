@@ -20,6 +20,7 @@ export default {
   },
 
   build: {
+    outDir: '../dist/2-shelter',
     emptyOutDir: true,
     rollupOptions: {
       input: getAllHTMLFiles(new URL('.', import.meta.url)),
