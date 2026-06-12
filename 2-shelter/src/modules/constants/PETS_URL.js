@@ -1,1 +1,1 @@
-export default '/pets.json';
+export default import.meta.env.BASE_URL + 'pets.json';
