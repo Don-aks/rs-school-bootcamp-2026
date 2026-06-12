@@ -43,18 +43,6 @@ export default [
       'import/extensions': 'off',
       'import/prefer-default-export': 'off',
       'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-      'import/order': [
-        'error',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            ['parent', 'sibling', 'index'],
-          ],
-          'newlines-between': 'always',
-        },
-      ],
 
       /* ---------------- OUR RULES ------------ */
 

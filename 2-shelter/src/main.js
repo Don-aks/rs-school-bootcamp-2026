@@ -1,7 +1,9 @@
 import DocumentClickHandler from '@/modules/services/DocumentClickHandler';
 import Preloader from '@/modules/Preloader';
-import PetCardsRenderer from '@/modules/features/PetCardsRenderer';
+
 import getPetCards from '@/modules/api/getPetCards';
+
+import PetCardsRenderer from '@/modules/features/PetCardsRenderer';
 import CopyToClipboardController from '@/modules/features/CopyToClipboardController';
 
 import '@/styles/fonts.scss';
