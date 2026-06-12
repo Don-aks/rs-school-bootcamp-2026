@@ -4,6 +4,7 @@ import { viteImageToAVIFPlugin } from 'vite-image-to-avif-plugin';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 
 import optimizeSvgSources from './plugins/optimizeSvgSources';
+import spritemapFix from './plugins/spritemapFix';
 import getAllHTMLFiles from './plugins/getAllHTMLFiles';
 
 export default {
@@ -20,6 +21,7 @@ export default {
   },
 
   build: {
+    outDir: '../dist/2-shelter',
     emptyOutDir: true,
     rollupOptions: {
       input: getAllHTMLFiles(new URL('.', import.meta.url)),
@@ -40,5 +42,6 @@ export default {
       outputDir: 'src/assets/images',
     }),
     optimizeSvgSources(),
+    spritemapFix,
   ],
 };

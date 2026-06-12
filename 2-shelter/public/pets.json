@@ -1,7 +1,7 @@
 [
   {
     "name": "Katrine",
-    "img": "/images/pets/katrine.avif",
+    "img": "images/pets/katrine.avif",
     "imgAlt": "A grey British Shorthair cat standing and looking directly forward, isolated on a solid white background",
     "type": "Cat",
     "breed": "British Shorthair",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Jennifer",
-    "img": "/images/pets/jennifer.avif",
+    "img": "images/pets/jennifer.avif",
     "imgAlt": "A small, fluffy light cream-colored puppy sitting and looking slightly to the side, isolated on a solid white background",
     "type": "Dog",
     "breed": "Labrador",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Woody",
-    "img": "/images/pets/woody.avif",
+    "img": "images/pets/woody.avif",
     "imgAlt": "A happy golden retriever lying down on a solid white background, looking directly forward with an open mouth and panting expression",
     "type": "Dog",
     "breed": "Golden Retriever",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Sophia",
-    "img": "/images/pets/sophia.avif",
+    "img": "images/pets/sophia.avif",
     "imgAlt": "A close-up of a small, fluffy black and white puppy being held gently in a person's hands against a dark background",
     "type": "Dog",
     "breed": "Shih tzu",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Timmy",
-    "img": "/images/pets/timmy.avif",
+    "img": "images/pets/timmy.avif",
     "imgAlt": "A grey British Shorthair cat sitting and looking directly forward, isolated on a solid white background",
     "type": "Cat",
     "breed": "British Shorthair",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Charly",
-    "img": "/images/pets/charly.avif",
+    "img": "images/pets/charly.avif",
     "imgAlt": "A mixed-breed tan and white dog lying down on a brown couch and looking forward with a calm expression",
     "type": "Dog",
     "breed": "Jack Russell Terrier",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Scarlett",
-    "img": "/images/pets/scarlett.avif",
+    "img": "images/pets/scarlett.avif",
     "imgAlt": "A small Jack Russell Terrier puppy standing and looking forward, isolated on a solid white background",
     "type": "Dog",
     "breed": "Jack Russell Terrier",
@@ -85,7 +85,7 @@
   },
   {
     "name": "Freddie",
-    "img": "/images/pets/freddie.avif",
+    "img": "images/pets/freddie.avif",
     "imgAlt": "A light-colored tabby cat sitting and looking directly forward, isolated on a solid white background",
     "type": "Cat",
     "breed": "British Shorthair",

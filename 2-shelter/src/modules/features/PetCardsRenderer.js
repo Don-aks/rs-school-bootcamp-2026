@@ -47,6 +47,8 @@ class PetCardsRenderer {
     ]);
 
     cardElement.dataset.index = index;
+    const dinamicImg = import.meta.env.BASE_URL + card.img;
+
     cardElement.innerHTML = `
       <article
         class="pet-card pets__pet-card"
@@ -55,7 +57,7 @@ class PetCardsRenderer {
         <figure class="pet-card__figure">
           <img
             class="pet-card__image"
-            src="${card.img}"
+            src="${dinamicImg}"
             alt="${card.imgAlt}"
           />
           <figcaption class="pet-card__name">${card.name}</figcaption>
