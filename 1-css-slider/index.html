@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS only Slider</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slider__slider">
+        <ul class="slider__track">
+          <li class="slide slider__slide">
+            <img class="slide__image" src="images/photo-1.jpg" alt="" />
+          </li>
+          <li class="slide slider__slide">
+            <img class="slide__image" src="images/photo-2.jpg" alt="" />
+          </li>
+          <li class="slide slider__slide">
+            <img class="slide__image" src="images/photo-3.jpg" alt="" />
+          </li>
+          <li class="slide slider__slide">
+            <img class="slide__image" src="images/photo-4.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="slider__caption-wrapper" aria-live="polite">
+        <p class="slider__caption">Beach and ocean</p>
+        <p class="slider__caption">Street</p>
+        <p class="slider__caption">Building with umbrella</p>
+        <p class="slider__caption">Tasty food</p>
+      </div>
+
+      <nav class="slider__navigation">
+        <label class="slider__radio-label">
+          <input class="slider__radio" type="radio" name="slider-nav" checked />
+        </label>
+        <label class="slider__radio-label">
+          <input class="slider__radio" type="radio" name="slider-nav" />
+        </label>
+        <label class="slider__radio-label">
+          <input class="slider__radio" type="radio" name="slider-nav" />
+        </label>
+        <label class="slider__radio-label">
+          <input class="slider__radio" type="radio" name="slider-nav" />
+        </label>
+      </nav>
+    </div>
+  </body>
+</html>
