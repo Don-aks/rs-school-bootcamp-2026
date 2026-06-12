@@ -1,6 +1,8 @@
+import DocumentClickHandler from '@/modules/services/DocumentClickHandler';
 import Preloader from '@/modules/Preloader';
 import PetCardsRenderer from '@/modules/features/PetCardsRenderer';
 import getPetCards from '@/modules/api/getPetCards';
+import CopyToClipboardController from '@/modules/features/CopyToClipboardController';
 
 import '@/styles/fonts.scss';
 import '@/styles/reset.scss';
@@ -32,3 +34,8 @@ if (petCardsRenderer.initialized) {
       throw error;
     });
 }
+
+const copyToClipboardController = new CopyToClipboardController();
+const clickHandler = new DocumentClickHandler();
+
+clickHandler.register(copyToClipboardController);
