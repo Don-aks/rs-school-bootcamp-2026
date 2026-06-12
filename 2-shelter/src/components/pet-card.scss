@@ -14,6 +14,12 @@
 
   @include hover {
     background-color: var(--bg);
+    cursor: pointer;
+
+    .pet-card__btn {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
   }
 
   &__figure {
@@ -28,13 +34,5 @@
   &__name {
     font-size: 20px;
     letter-spacing: var(--spacing-wide);
-  }
-
-  &__btn {
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-    }
   }
 }
