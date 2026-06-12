@@ -1,3 +1,5 @@
+import SELF_EVALUATION from '@/modules/constants/SELF_EVALUATION';
+
 import DocumentClickHandler from '@/modules/services/DocumentClickHandler';
 import Preloader from '@/modules/Preloader';
 
@@ -18,6 +20,8 @@ import '@/components/menu.scss';
 
 import '@/components/layout/header.scss';
 import '@/components/layout/footer.scss';
+
+console.log(SELF_EVALUATION);
 
 const preloader = new Preloader();
 const petCardsRenderer = new PetCardsRenderer();
