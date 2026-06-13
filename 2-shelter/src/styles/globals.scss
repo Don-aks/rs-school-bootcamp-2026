@@ -29,7 +29,7 @@ body {
   min-block-size: 100dvh;
   min-inline-size: $min-viewport-width;
 
-  font: 16px/1.6 var(--font-primary);
+  font: 15px/1.6 var(--font-primary);
   background-color: var(--bg);
   color: var(--text-primary);
 
@@ -41,7 +41,7 @@ body {
 }
 
 .section {
-  padding-block: 80px 100px;
+  padding-block: 80px 102px;
 
   &__inner {
     @extend %flex-column;
@@ -121,6 +121,10 @@ body {
         border-color: var(--primary-hover);
       }
     }
+  }
+
+  &--round {
+    border-radius: 50%;
   }
 }
 
