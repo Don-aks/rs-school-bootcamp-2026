@@ -2,11 +2,6 @@ export default `
 Main страница · 70
   Markup validation +10:
     Валидация W3C прошла без errors (+5)
-      (!!WARNING:
-        Валидатор подсвечивает Trailing slash,
-        это не варнинг и не ошибка, а просто информация для
-        разработчика, прошу не снижать за это оценку
-      )
     Logo текстом + ровно один <h1> + favicon (+5)
 
   Layout matches design +35:
