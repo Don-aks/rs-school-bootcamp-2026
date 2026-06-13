@@ -12,6 +12,10 @@
 
   transition: background-color var(--transition);
 
+  .page-pets & {
+    gap: 23px;
+  }
+
   @include hover {
     background-color: var(--bg);
     cursor: pointer;
