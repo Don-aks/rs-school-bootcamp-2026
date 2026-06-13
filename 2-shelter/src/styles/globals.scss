@@ -1,0 +1,144 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+
+  &:has(dialog[open]) {
+    overflow: clip;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: 0.01s !important;
+  }
+}
+
+body {
+  position: relative;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+  min-block-size: 100dvh;
+  min-inline-size: $min-viewport-width;
+
+  font: 15px/1.6 var(--font-primary);
+  background-color: var(--bg);
+  color: var(--text-primary);
+
+  overflow-x: clip;
+}
+
+.main:not(:has(.hero)) {
+  padding-top: var(--header-height);
+}
+
+.section {
+  padding-block: 80px 102px;
+
+  .page-pets & {
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    @extend %flex-column;
+    align-items: center;
+    gap: 60px;
+
+    text-align: center;
+  }
+
+  &__title {
+    max-width: 400px;
+  }
+}
+
+.title {
+  display: inline-block;
+  width: min(450px, 100%);
+
+  font-size: 35px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: var(--spacing-wide);
+
+  color: var(--color-text-secondary);
+}
+
+.text {
+  @extend %flex-column;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-grid;
+  place-content: center;
+  padding: 15px 45px;
+
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: var(--spacing-wide);
+
+  color: var(--text-btn);
+  border-radius: 100px;
+
+  @extend %no-highlight;
+
+  &:disabled {
+    color: var(--icon-disabled);
+    border-color: var(--icon-disabled);
+
+    cursor: default;
+  }
+
+  &:focus-visible {
+    border-radius: 100px;
+  }
+
+  &--primary {
+    background-color: var(--primary);
+    transition: background-color var(--transition);
+
+    @include hover {
+      &:not(:disabled) {
+        background-color: var(--primary-hover);
+      }
+    }
+  }
+
+  &--secondary {
+    border: 1px solid var(--primary);
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include hover {
+      &:not(:disabled) {
+        background-color: var(--primary-hover);
+        border-color: var(--primary-hover);
+      }
+    }
+  }
+
+  &--round {
+    border-radius: 50%;
+  }
+}
+
+:focus {
+  outline: transparent;
+  -webkit-focus-ring-color: transparent;
+}
+
+:focus-visible {
+  outline: var(--outline-size) solid var(--primary);
+  outline-offset: var(--outline-offset);
+  border-radius: 4px;
+}

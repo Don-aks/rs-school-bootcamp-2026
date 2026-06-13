@@ -1,0 +1,21 @@
+.about {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+  }
+
+  &__content {
+    @extend %flex-column;
+
+    flex-basis: 450px;
+    gap: 25px;
+
+    translate: 11px 0;
+  }
+
+  &__text {
+    font-family: var(--font-secondary);
+  }
+}

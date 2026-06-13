@@ -1,0 +1,40 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(calc(100% + 10px));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(100% + 10px));
+  }
+}
+
+.info-message {
+  position: fixed;
+  bottom: 3dvh;
+  right: 10px;
+  z-index: calc(var(--header-z) + 1);
+
+  padding: 12px 30px;
+
+  font: 14px/1.3 var(--font-secondary);
+  letter-spacing: var(--spacing-wide);
+
+  background-color: var(--primary);
+  border-radius: 10px;
+
+  animation: slideIn 0.5s both;
+
+  &--hidden {
+    animation: slideOut 0.5s forwards;
+  }
+}
