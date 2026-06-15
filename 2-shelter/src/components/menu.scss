@@ -27,6 +27,7 @@
       display: inline-block;
 
       color: var(--current-link-color);
+      pointer-events: none;
 
       &::after {
         content: '';
