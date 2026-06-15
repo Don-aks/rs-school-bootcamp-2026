@@ -12,6 +12,7 @@
     letter-spacing: var(--spacing-wide);
 
     color: var(--text-btn);
+    border-width: 2px;
     border-radius: 50%;
 
     @extend %no-highlight;
