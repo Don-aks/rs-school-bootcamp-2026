@@ -24,11 +24,13 @@
   }
 }
 
-@mixin mq($size, $type: max) {
-  @if map.has_key($breakpoints, $size) {
-    $size: map.get($breakpoints, $size);
+@mixin mq($breakpoint-name, $type: min) {
+  $size: null;
+
+  @if map.has_key($breakpoints, $breakpoint-name) {
+    $size: map.get($breakpoints, $breakpoint-name);
   } @else {
-    @error "Invalid breakpoint: #{$size}";
+    @error "Invalid breakpoint name: #{$breakpoint-name}";
   }
 
   @if $type == max {
