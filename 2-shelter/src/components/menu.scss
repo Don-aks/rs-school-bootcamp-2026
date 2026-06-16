@@ -1,18 +1,98 @@
+@use '@/styles/helpers' as *;
+
+@mixin menu-list-desktop {
+  position: static;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: auto;
+  height: auto;
+  gap: 10px 35px;
+  padding: 0;
+
+  font-size: 15px;
+  text-align: left;
+
+  background-color: transparent;
+  translate: 0 0;
+}
+
 .menu {
+  --btn-width: 44px;
+  --btn-line-width: 30px;
+
   &__btn {
-    display: none;
+    position: relative;
+    z-index: calc(var(--overlay-z) + 2);
+    display: grid;
+    place-items: center;
+    @include square(var(--btn-width));
+
+    transition: rotate var(--transition);
+    translate: calc((var(--btn-width) - var(--btn-line-width)) / 2) 0;
+
+    &--active {
+      rotate: 90deg;
+    }
+  }
+
+  &__btn-line {
+    position: relative;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: var(--primary);
+    transition: rotate var(--transition);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+
+      display: block;
+      width: 30px;
+      height: 2px;
+
+      background-color: var(--primary);
+    }
+
+    &::after {
+      top: 10px;
+    }
   }
 
   &__list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: calc(var(--overlay-z) + 1);
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 35px;
+    width: 320px;
+    height: 100dvh;
+    gap: 40px;
+    padding: 90px 35px;
 
     font-family: var(--font-secondary);
-    font-size: 15px;
+    font-size: 32px;
+    text-align: center;
 
+    background-color: var(--bg-dark);
     color: var(--links-color);
+    translate: 200% 0;
+
+    overflow-y: auto;
+
+    &--open {
+      translate: 0 0;
+    }
   }
 
   &__link {

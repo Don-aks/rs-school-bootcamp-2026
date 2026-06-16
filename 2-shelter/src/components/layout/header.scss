@@ -1,8 +1,14 @@
+@use '@/components/menu' as *;
+
 .header {
   // TODO: change to fixed on stage 3
   --links-color: var(--text-on-dark-secondary);
   --current-link-color: var(--text-on-dark-primary);
   --link-hover-color: var(--text-on-dark-primary);
+
+  @include mq('tablet') {
+    --links-color: var(--text-on-dark-primary);
+  }
 
   position: absolute;
   top: 0;
@@ -42,5 +48,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__menu {
+    .menu__btn {
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+
+    .menu__list {
+      @include mq('tablet') {
+        @include menu-list-desktop();
+      }
+    }
   }
 }

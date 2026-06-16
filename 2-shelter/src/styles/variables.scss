@@ -46,7 +46,8 @@
 
   // Layout
   --container-width: #{$container-max-width};
-  --container-padding-x: 30px;
+  // 20px @ 320 -> 30px @ 768
+  --container-padding-x: clamp(20px, 2.23vw + 12.86px, 30px);
   --header-height: #{60px + 30px * 2};
 
   // Focus outline
