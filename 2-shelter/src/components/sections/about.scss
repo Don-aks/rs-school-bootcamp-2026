@@ -1,21 +1,50 @@
 .about {
   &__inner {
     display: flex;
-    justify-content: center;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 120px;
+    // 42px @ 320 -> 80px @ 768
+    gap: clamp(42px, 8.48vw + 14.86px, 80px);
+    padding-inline: 25px;
+
+    @include mq('tablet-lg') {
+      flex-direction: row;
+      justify-content: center;
+      gap: 120px;
+    }
   }
 
   &__content {
     @extend %flex-column;
-
-    flex-basis: 450px;
+    width: min(430px, 100%);
     gap: 25px;
 
-    translate: 11px 0;
+    @include mq('tablet-lg') {
+      flex-basis: 450px;
+      translate: 11px 0;
+    }
+  }
+
+  &__title {
+    @include mq('tablet', max) {
+      text-align: center;
+    }
   }
 
   &__text {
     font-family: var(--font-secondary);
+
+    @include mq('tablet', max) {
+      text-align: justify;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__image-img {
+    // 354px @ 320 -> 408px @ 768
+    height: clamp(354px, 12.05vw + 315.43px, 408px);
   }
 }
