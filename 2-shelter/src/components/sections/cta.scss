@@ -13,8 +13,9 @@
 
     @include mq('tablet') {
       --col-gap: 60px;
-      row-gap: 55px;
+      row-gap: 50px;
       justify-content: center;
+      width: min(630px, 100%);
     }
 
     @include mq('desktop') {
