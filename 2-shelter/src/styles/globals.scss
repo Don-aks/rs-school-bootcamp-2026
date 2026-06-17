@@ -54,7 +54,8 @@ body {
   &__inner {
     @extend %flex-column;
     align-items: center;
-    gap: 60px;
+    // 42px @ 320 -> 60px @ 768
+    gap: clamp(42px, 4.02vw + 29.14px, 60px);
 
     text-align: center;
   }
