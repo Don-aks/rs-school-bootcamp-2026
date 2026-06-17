@@ -1,6 +1,9 @@
 .pets {
-  padding-top: 84px;
   background-color: var(--bg-muted);
+
+  @include mq('tablet') {
+    padding-top: 84px;
+  }
 
   .page-pets & {
     padding-top: 80px;
@@ -15,6 +18,7 @@
   &__inner {
     @extend %flex-column;
     align-items: center;
+    padding-inline: 10px;
 
     text-align: center;
   }
@@ -26,11 +30,12 @@
   }
 
   &__slider {
-    justify-content: start;
-    gap: 49px;
+    // 40px @ 768 -> 90px @ 1280
+    --gap: clamp(40px, 9.77vw - 35px, 90px);
 
     &:not(:last-child) {
-      margin-bottom: 60px;
+      // 42px @ 320 -> 60px @ 768
+      margin-bottom: clamp(42px, 4.02vw + 29.14px, 60px);
     }
 
     .slider__track {
@@ -38,12 +43,34 @@
     }
 
     .slider__inner {
-      gap: 90px;
+      gap: var(--gap);
+    }
+
+    .slider__slide {
+      display: grid;
+      place-items: center;
+      flex-basis: 100%;
+
+      @include mq('tablet') {
+        flex-basis: calc(50% - var(--gap) / 2);
+      }
+
+      @include mq('tablet-lg') {
+        flex-basis: calc(33.33% - var(--gap) / 1.5);
+      }
+    }
+
+    .pet-card {
+      @include mq('tablet-lg') {
+        width: 100%;
+      }
     }
 
     .slider__nav-btn {
       &--prev {
-        translate: -7px 0;
+        @include mq('tablet-lg') {
+          translate: -7px 0;
+        }
       }
     }
   }

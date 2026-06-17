@@ -1,10 +1,20 @@
 .slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
+  gap: 20px 80px;
 
-  &:has(.slider__nav-btn) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @include mq('tablet') {
+    flex-wrap: nowrap;
+    justify-content: start;
+    // 12px @ 768 -> 49px @ 1280
+    gap: clamp(12px, 7.23vw - 43.5px, 49px);
+
+    &:has(.slider__nav-btn) {
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__track {
@@ -23,13 +33,19 @@
   &__nav-btn {
     display: inline-grid;
     place-content: center;
+    flex-shrink: 0;
     @include square(52px);
+
     border-radius: 50%;
     border: 2px solid var(--primary);
 
     transition:
       border-color var(--transition),
       background-color var(--transition);
+
+    @include mq('tablet', max) {
+      order: 2;
+    }
 
     @include hover {
       &:not(:disabled) {
