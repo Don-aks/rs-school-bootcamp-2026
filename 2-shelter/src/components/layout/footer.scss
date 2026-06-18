@@ -5,7 +5,9 @@
   line-height: 1.15;
   letter-spacing: var(--spacing-wide);
 
-  background: var(--gradient-footer) var(--bg-dark-alt);
+  background:
+    var(--noise-url),
+    var(--gradient-footer) var(--bg-dark-alt);
   color: var(--primary);
 
   &__inner {
