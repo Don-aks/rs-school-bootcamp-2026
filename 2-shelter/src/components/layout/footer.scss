@@ -58,20 +58,18 @@
     width: 22px;
   }
 
-  &__locations-title {
-    &:not(:last-child) {
-      margin-bottom: 29px;
+  &__locations {
+    @extend %flex-column;
+    gap: 29px;
 
-      .page-pets & {
-        margin-bottom: 26px;
-      }
+    .page-pets & {
+      gap: 26px;
     }
   }
 
-  &__locations-item {
-    &:not(:last-child) {
-      margin-bottom: 32px;
-    }
+  &__locations-list {
+    @extend %flex-column;
+    gap: 32px;
   }
 
   &__image {
