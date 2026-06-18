@@ -48,8 +48,8 @@ img {
   // 42px @ 320 -> 80px @ 768
   padding-top: clamp(42px, 8.48vw + 14.86px, 80px);
 
-  // 42px @ 320 -> 102px @ 768
-  padding-bottom: clamp(42px, 13.39vw + -0.86px, 102px);
+  // 42px @ 320 -> 100px @ 768
+  padding-bottom: clamp(42px, 12.95vw + 0.57px, 100px);
 
   .page-pets & {
     padding-bottom: 100px;

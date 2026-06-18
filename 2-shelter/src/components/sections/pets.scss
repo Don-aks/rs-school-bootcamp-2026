@@ -18,25 +18,18 @@
   &__inner {
     @extend %flex-column;
     align-items: center;
-    padding-inline: 10px;
+    // 42px @ 320 -> 60px @ 768
+    gap: clamp(42px, 4.02vw + 29.14px, 60px);
+
+    // 10px @ 320 -> 30px @ 768
+    padding-inline: clamp(10px, 4.46vw - 4.29px, 30px);
 
     text-align: center;
-  }
-
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: 56px;
-    }
   }
 
   &__slider {
     // 40px @ 768 -> 90px @ 1280
     --gap: clamp(40px, 9.77vw - 35px, 90px);
-
-    &:not(:last-child) {
-      // 42px @ 320 -> 60px @ 768
-      margin-bottom: clamp(42px, 4.02vw + 29.14px, 60px);
-    }
 
     .slider__track {
       width: min(990px, 100%);

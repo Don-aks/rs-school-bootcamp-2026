@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 .header {
   // TODO: change to fixed on stage 3
   --links-color: var(--text-on-dark-secondary);

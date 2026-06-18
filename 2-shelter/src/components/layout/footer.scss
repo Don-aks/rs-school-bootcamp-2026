@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 .footer {
   // 30px @ 768 -> 60px @ 1280
   padding-top: clamp(30px, 5.86vw - 15px, 60px);
@@ -21,7 +23,7 @@
     justify-content: center;
     align-items: start;
     // 40px @ 320 -> 60px @ 768
-    gap: clamp(40px, 4.46vw + 25.71px, 60px);
+    gap: clamp(40px, 4.46vi + 25.71px, 60px);
     padding-inline: 10px;
 
     @include mq('desktop') {
@@ -32,19 +34,21 @@
   &__contacts,
   &__locations {
     @extend %flex-column;
-    width: min(302px, 100%);
-    gap: 38px;
+    gap: 40px;
+
+    @include mq('tablet') {
+      gap: 35px;
+    }
   }
 
   &__contacts-list,
   &__locations-list {
-    gap: 36px;
+    // was 26px
+    gap: 33px;
   }
 
   &__title {
     width: min(280px, 100%);
-    margin-inline: auto;
-
     color: var(--text-on-dark-tertiary);
 
     @include mq('mobile', max) {
@@ -83,18 +87,14 @@
     width: 22px;
   }
 
-  &__locations {
-    @extend %flex-column;
-
-    .page-pets & {
-      gap: 26px;
-    }
-  }
-
   &__locations-list {
     @extend %flex-column;
-    gap: 32px;
     text-align: left;
+
+    @media (min-width: map.get($breakpoints, 'tablet')),
+      (max-width: map.get($breakpoints, 'tablet-lg')) {
+      translate: -4px -7px;
+    }
   }
 
   &__image {

@@ -28,7 +28,7 @@
     align-items: center;
     flex-basis: calc(50% - var(--col-gap) / 2);
     // 15px @ 320 -> 28px @ 768
-    gap: clamp(15px, 2.9vi + 5.71px, 28px);
+    gap: clamp(15px, 2.9vw + 5.71px, 28px);
 
     @include mq('tablet') {
       flex-basis: calc(33.33% - var(--col-gap) / 1.5);
@@ -43,7 +43,7 @@
       display: block;
 
       // 50px @ 320 -> 60px @ 768
-      @include square(clamp(50px, 2.23vi + 42.86px, 60px));
+      @include square(clamp(50px, 2.23vw + 42.86px, 60px));
 
       background: var(--icon) center/contain no-repeat;
     }
