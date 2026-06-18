@@ -1,9 +1,14 @@
 .footer {
-  padding-top: 60px;
+  // 30px @ 768 -> 60px @ 1280
+  padding-top: clamp(30px, 5.86vw - 15px, 60px);
 
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: var(--spacing-wide);
+
+  @include mq('mobile', max) {
+    text-align: center;
+  }
 
   background:
     var(--noise-url),
@@ -13,28 +18,48 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
-    gap: 60px;
+    // 40px @ 320 -> 60px @ 768
+    gap: clamp(40px, 4.46vw + 25.71px, 60px);
+    padding-inline: 10px;
+
+    @include mq('desktop') {
+      justify-content: space-between;
+    }
   }
 
   &__contacts,
   &__locations {
     @extend %flex-column;
-    align-items: start;
+    width: min(302px, 100%);
+    gap: 38px;
   }
 
-  &__contacts {
-    gap: 40px;
+  &__contacts-list,
+  &__locations-list {
+    gap: 36px;
   }
 
   &__title {
+    width: min(280px, 100%);
+    margin-inline: auto;
+
     color: var(--text-on-dark-tertiary);
+
+    @include mq('mobile', max) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__contacts-list {
     @extend %flex-column;
-    gap: 29px;
+
+    @include mq('tablet-lg') {
+      gap: 29px;
+    }
   }
 
   &__link {
@@ -60,7 +85,6 @@
 
   &__locations {
     @extend %flex-column;
-    gap: 29px;
 
     .page-pets & {
       gap: 26px;
@@ -70,9 +94,15 @@
   &__locations-list {
     @extend %flex-column;
     gap: 32px;
+    text-align: left;
   }
 
   &__image {
-    margin-top: -16px;
+    // 260px @ 320 -> 300px @ 768
+    width: clamp(260px, 8.93vw + 231.43px, 300px);
+
+    @include mq('desktop') {
+      margin-top: -16px;
+    }
   }
 }
