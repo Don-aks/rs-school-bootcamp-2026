@@ -1,33 +1,74 @@
 .donation {
+  // 42px @ 320 -> 66px @ 768
+  padding-top: clamp(42px, 5.36vi + 24.86px, 66px);
+  // 42px @ 320 -> 100px @ 768
+  padding-bottom: clamp(42px, 12.95vi + 0.57px, 100px);
   background-color: var(--bg-muted);
 
   &__inner {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    // 42px @ 320 -> 60px @ 768
+    gap: clamp(42px, 4.02vw + 29.14px, 60px);
+
+    @include mq('tablet-lg') {
+      flex-direction: row;
+      justify-content: center;
+      align-items: end;
+      gap: 30px;
+    }
+
+    @include mq('desktop') {
+      align-items: center;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    // 260px @ 320 -> 505 px @ 768
+    max-width: clamp(260px, 54.69vi + 85px, 505px);
   }
 
   &__content {
     @extend %flex-column;
-    align-items: start;
-    flex-basis: 380px;
-    gap: 15px;
+    width: min(380px, 100%);
+    gap: 16px;
+
+    @include mq('mobile', max) {
+      text-align: center;
+    }
+
+    @include mq('tablet') {
+      align-items: start;
+    }
+
+    @include mq('tablet-lg') {
+      flex: 0 0 380px;
+      gap: 15px;
+    }
   }
 
   &__subtitle {
     font-size: 15px;
+    line-height: 1.6;
     font-weight: 400;
-    letter-spacing: var(--spacing-wide);
+
+    @include mq('mobile') {
+      letter-spacing: var(--spacing-wide);
+      line-height: 1.1;
+    }
   }
 
   &__card-badge {
     position: relative;
 
-    padding-block: 10px;
-    padding-inline: 60px 15px;
+    padding-block: 13px;
+    padding-inline: 58px 15px;
 
-    font-size: 20px;
+    // 15px @ 320 -> 20px @ 768
+    font-size: clamp(15px, 1.12vw + 11.43px, 20px);
     line-height: 1.15;
     letter-spacing: var(--spacing-wide);
 
@@ -36,6 +77,15 @@
     border-radius: 9px;
 
     transition: background-color var(--transition);
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    @include mq('mobile') {
+      padding-block: 10px;
+      padding-left: 60px;
+    }
 
     @include hover {
       background-color: var(--primary-hover);
@@ -58,6 +108,12 @@
 
   &__legal-text {
     font: italic 12px/1.5 var(--font-secondary);
+    text-align: justify;
+
     color: var(--text-muted);
+
+    @include mq('tablet') {
+      text-align: left;
+    }
   }
 }

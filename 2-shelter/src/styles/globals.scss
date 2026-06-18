@@ -36,6 +36,10 @@ body {
   overflow-x: clip;
 }
 
+img {
+  height: auto;
+}
+
 .main:not(:has(.hero)) {
   padding-top: var(--header-height);
 }
