@@ -8,7 +8,6 @@
 
     display: flex;
     flex-wrap: wrap;
-    width: min(1029px, 100%);
     gap: 28px var(--col-gap);
 
     @include mq('tablet') {
@@ -19,6 +18,7 @@
     }
 
     @include mq('desktop') {
+      width: min(1029px, 100%);
       gap: 42px 120px;
     }
   }
