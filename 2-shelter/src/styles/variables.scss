@@ -1,5 +1,3 @@
-@use 'sass:color';
-
 :root {
   // Fonts
   --font-primary: Georgia, 'Georgia Web', serif;
@@ -47,7 +45,7 @@
   --text-btn: var(--black);
 
   // Layout
-  --container-width: 1200px;
+  --container-width: #{$container-max-width};
   --container-padding-x: 30px;
   --header-height: #{60px + 30px * 2};
 
