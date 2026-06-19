@@ -3,6 +3,12 @@
   --btn-line-width: 30px;
 
   &__btn {
+    --line-color: var(--primary);
+
+    .page-pets & {
+      --line-color: var(--bg-dark);
+    }
+
     position: relative;
     z-index: calc(var(--overlay-z) + 2);
     display: grid;
@@ -27,7 +33,7 @@
     width: 30px;
     height: 2px;
 
-    background-color: var(--primary);
+    background-color: var(--line-color);
     transition: rotate var(--transition);
 
     &::before,
@@ -41,7 +47,7 @@
       width: 30px;
       height: 2px;
 
-      background-color: var(--primary);
+      background-color: var(--line-color);
     }
 
     &::after {
