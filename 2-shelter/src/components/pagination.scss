@@ -1,7 +1,8 @@
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  // 10px @ 320 -> 20px @ 768
+  gap: clamp(10px, 2.23vw + 2.86px, 20px);
 
   &__btn {
     @include square(52px);
