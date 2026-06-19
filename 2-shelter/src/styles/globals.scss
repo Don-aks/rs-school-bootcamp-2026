@@ -69,8 +69,8 @@ img {
   display: inline-block;
   width: min(450px, 100%);
 
-  // 25px @ 320 -> 35px @ 768
-  font-size: clamp(1.56rem, 2.23vi + 1.12rem, 2.19rem);
+  // 25px @ 320 -> 35px @  768
+  font-size: clamp(25px, 2.23vw + 17.86px, 35px);
   line-height: 1.3;
   font-weight: 400;
   letter-spacing: var(--spacing-wide);
