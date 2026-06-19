@@ -45,12 +45,10 @@
 
   &__contacts-list,
   &__locations-list {
-    // was 26px
     gap: 33px;
   }
 
   &__title {
-    width: min(280px, 100%);
     color: var(--text-on-dark-tertiary);
 
     @include mq('mobile', max) {
@@ -89,6 +87,16 @@
     width: 22px;
   }
 
+  &__locations-title {
+    width: min(280px, 100%);
+
+    .page-pets & {
+      @include mq('tablet', max) {
+        translate: 10px -4px;
+      }
+    }
+  }
+
   &__locations-list {
     @extend %flex-column;
     text-align: left;
@@ -96,6 +104,10 @@
     @media (min-width: map.get($breakpoints, 'tablet')),
       (max-width: map.get($breakpoints, 'tablet-lg')) {
       translate: -4px -7px;
+
+      .page-pets & {
+        translate: 0 -5px;
+      }
     }
   }
 
