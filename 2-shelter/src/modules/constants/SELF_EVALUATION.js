@@ -1,35 +1,20 @@
 export default `
-Main страница · 70
-  Markup validation +10:
-    Валидация W3C прошла без errors (+5)
-    Logo текстом + ровно один <h1> + favicon (+5)
+Main page (45 points)
+  Layout matches the design at 1280px +15
+  Layout matches the design at 768px +15
+  Layout matches the design at 320px +15
+Pets page (15 points)
+  Layout matches the design at 1280px +5
+  Layout matches the design at 768px +5
+  Layout matches the design at 320px +5
+Responsive behavior (50 points)
+  No horizontal scroll on either page at any width from 320px to 1280px +20
+  Layout adapts smoothly between breakpoints - no overlapping, cut-off, or visually broken content on either page +15
+  The burger icon appears instead of the navigation menu when the viewport is narrower than 768px on both pages +5 (the menu itself does not need to open at this stage)
+  Markup is valid on both pages per https://validator.w3.org/ +10
 
-  Layout matches design +35:
-    <header> (+5)
-    Not only (+5)
-    About (+5)
-    Our Friends (+5)
-    Help (+5)
-    In addition (+5)
-    <footer> (+5)
-
-  CSS requirements +15:
-    Help через grid-layout (Flexbox) (+5)
-    При окне >1280px layout остаётся по центру (+5)
-    Фоновый цвет растягивается на всю ширину (+5)
-
-  Interactivity +10:
-    About the Shelter подсвечен и не интерактивен; остальные — интерактивны; плавный anchor scroll; все ссылки работают (+5)
-    Pet-карточки интерактивны при наведении на любую часть; hover/active с цветом/фоном, плавно, без layout jump (+5)
-
-Pets страница · 40
-  Markup validation +10: аналогично Main
-  Layout matches design +15: <header> + Our Friends + <footer> (по +5)
-  CSS requirements +5: layout по центру + фон растягивается
-  Interactivity +10: аналогично Main
+Score: 110/110.
 
 Notes:
-  - Вместо пустой ссылки на лого, вставил ссылку на индекс страницу.
-  - Вместо пустой ссылки на номере карты вставил кнопку скопировать в буфер обмена.
-  Прошу не снижать за это оценку, я просто добавил функционал вместо заглушки.
+  !!! If you increase viewport height on pets page too much, you can see the footer attached to the bottom of the page, so you will see design discrepancy !!!
 `;
