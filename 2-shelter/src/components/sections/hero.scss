@@ -83,5 +83,9 @@
     // 260px @ 320 -> 569 @ 768
     width: clamp(260px, 68.97vw + 39.29px, 569px);
     height: auto;
+
+    @include mq('tablet-lg') {
+      width: auto;
+    }
   }
 }

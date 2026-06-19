@@ -24,7 +24,9 @@
     align-items: start;
     // 40px @ 320 -> 60px @ 768
     gap: clamp(40px, 4.46vi + 25.71px, 60px);
-    padding-inline: 10px;
+
+    // 10px @ 320 -> 28px @  768
+    padding-inline: clamp(10px, 4.02vw - 2.86px, 28px);
 
     @include mq('desktop') {
       justify-content: space-between;
