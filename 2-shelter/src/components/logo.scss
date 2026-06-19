@@ -1,0 +1,19 @@
+.logo {
+  @extend %flex-column;
+  align-items: end;
+  gap: 10px;
+
+  &__text {
+    font: 32px/1.1 var(--font-primary);
+    letter-spacing: var(--spacing-wide);
+
+    color: var(--primary);
+  }
+
+  &__caption {
+    font: 13px/1.2 var(--font-secondary);
+    letter-spacing: 0.1em;
+
+    color: inherit;
+  }
+}

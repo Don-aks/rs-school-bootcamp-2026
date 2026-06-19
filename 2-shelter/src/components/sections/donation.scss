@@ -1,0 +1,63 @@
+.donation {
+  background-color: var(--bg-muted);
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__content {
+    @extend %flex-column;
+    align-items: start;
+    flex-basis: 380px;
+    gap: 15px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: var(--spacing-wide);
+  }
+
+  &__card-badge {
+    position: relative;
+
+    padding-block: 10px;
+    padding-inline: 60px 15px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: var(--spacing-wide);
+
+    color: var(--text-secondary);
+    background-color: var(--primary);
+    border-radius: 9px;
+
+    transition: background-color var(--transition);
+
+    @include hover {
+      background-color: var(--primary-hover);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 15px;
+
+      width: 30px;
+      height: 23px;
+
+      background-image: url('/__spritemap#credit-card-view');
+
+      translate: 0 calc(-50%);
+    }
+  }
+
+  &__legal-text {
+    font: italic 12px/1.5 var(--font-secondary);
+    color: var(--text-muted);
+  }
+}

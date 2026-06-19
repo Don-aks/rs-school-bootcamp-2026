@@ -1,0 +1,42 @@
+.pet-card {
+  position: relative;
+
+  @extend %flex-column;
+  align-items: center;
+  width: min(270px, 100%);
+  gap: 20px;
+  padding-bottom: 30px;
+
+  background-color: var(--bg-soft);
+  border-radius: 9px;
+
+  transition: background-color var(--transition);
+
+  .page-pets & {
+    gap: 23px;
+  }
+
+  @include hover {
+    background-color: var(--bg);
+    cursor: pointer;
+
+    .pet-card__btn {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+  }
+
+  &__figure {
+    @extend %flex-column;
+    align-items: center;
+    gap: 26px;
+
+    border-radius: 9px 9px 0 0;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: 20px;
+    letter-spacing: var(--spacing-wide);
+  }
+}
