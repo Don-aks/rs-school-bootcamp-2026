@@ -6,7 +6,7 @@
   --current-link-color: var(--text-on-dark-primary);
   --link-hover-color: var(--text-on-dark-primary);
 
-  @include mq('tablet') {
+  @include mq('tablet', max) {
     --links-color: var(--text-on-dark-primary);
   }
 
